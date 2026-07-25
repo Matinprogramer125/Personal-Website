@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *)); /* اکتیو کردن قابلیت دارک مود */
+
+@font-face {
+  font-family: "Hello";
+  src: url("../fonts/Estedad.ttf");
+}
+@font-face {
+  font-family: "iranYekan";
+  src: url("../fonts/IRANYekanWebMedium.ttf");
+}
+
+@theme {
+  --font-nima: "Hello";
+  --font-Yekan: "iranYekan";
+  /* ========== رنگ‌های اصلی پس‌زمینه ========== */
+  --color-background-primary: #0a0c10;
+  --color-background-secondary: #11161d;
+  --color-background-elevated: #1a202a;
+  --color-background-inverse: #e5e7eb;
+  --breakpoint-xs: 375px;
+
+  /* ========== رنگ‌های حاشیه و خطوط ========== */
+  --color-border-subtle: #1f2937;
+  --color-border-default: #374151;
+  --color-border-focused: #3b82f6;
+
+  /* ========== رنگ‌های متن ========== */
+  --color-text-primary: #e5e7eb;
+  --color-text-secondary: #9ca3af;
+  --color-text-tertiary: #6b7280;
+  --color-text-disabled: #4b5563;
+  --color-text-on-accent: #ffffff;
+
+  /* ========== رنگ‌های اکسانت (اصلی) ========== */
+  --color-accent-blue: #3b82f6;
+  --color-accent-blue-dark: #2563eb;
+  --color-accent-purple: #a855f7;
+  --color-accent-purple-dark: #9333ea;
+  --color-accent-rose: #f43f5e;
+  --color-accent-rose-dark: #e11d48;
+  --color-accent-orange: #f97316;
+  --color-accent-orange-dark: #ea580c;
+  --color-accent-emerald: #10b981;
+  --color-accent-emerald-dark: #059669;
+
+  /* ========== رنگ‌های حالت‌ها ========== */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+}
+
+@layer components {
+  .btn-primery {
+    @apply py-3 px-8 rounded-lg bg-sky-700 shadow-lg font-bold dark:text-white
+      hover:scale-95 duration-500 block;
+  }
+  .nav_links {
+    @apply block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors;
+  }
+
+  #sliderContent {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #sliderContent::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  /* Skill Card */
+  .skill-card {
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+  }
+  .dark .skill-card:hover {
+    box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Content */
+  .contact-card {
+    transition: all 0.3s ease;
+  }
+  .input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+    outline: none;
+  }
+}
