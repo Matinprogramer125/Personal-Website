@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *)); /* اکتیو کردن قابلیت دارک مود */
 
+
 @font-face {
   font-family: "Hello";
   src: url("../fonts/Estedad.ttf");
