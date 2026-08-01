@@ -23,24 +23,12 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 * HTML5
 * CSS3
-* JavaScript
+
 * Git & GitHub Pages
 
 ---
 
-## 📂 Project Structure
 
-```text
-Personal-Website/
-│
-├── index.html
-├── css/
-├── js/
-├── assets/
-│   ├── images/
-│   └── icons/
-└── README.md
-```
 
 > The actual folder structure may vary depending on future updates.
 
