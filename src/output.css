@@ -112,6 +112,7 @@
     --font-nima: "Hello";
     --color-accent-blue: #3b82f6;
     --color-accent-blue-dark: #2563eb;
+    --color-accent-rose-dark: #e11d48;
   }
 }
 @layer base {
@@ -505,11 +506,17 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
+  }
   .w-\[80\%\] {
     width: 80%;
   }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
   }
   .max-w-2xl {
     max-width: var(--container-2xl);
@@ -535,14 +542,23 @@
   .flex-1 {
     flex: 1;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
   .shrink {
     flex-shrink: 1;
   }
   .shrink-0 {
     flex-shrink: 0;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .rotate-90 {
     rotate: 90deg;
@@ -711,6 +727,9 @@
   }
   .bg-\[\#1a1d88\] {
     background-color: #1a1d88;
+  }
+  .bg-accent-rose-dark {
+    background-color: var(--color-accent-rose-dark);
   }
   .bg-amber-50 {
     background-color: var(--color-amber-50);
@@ -984,6 +1003,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-accent-blue) 20%, transparent);
     }
+  }
+  .text-accent-rose-dark {
+    color: var(--color-accent-rose-dark);
   }
   .text-amber-600 {
     color: var(--color-amber-600);
